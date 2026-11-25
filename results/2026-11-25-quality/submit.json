@@ -1,0 +1,48 @@
+{
+  "resource": {
+    "id": "70be3a38-10f4-4de8-8f11-37ea83cd9f8e",
+    "tenant": "evalhub-tenant",
+    "created_at": "2026-11-25T10:31:24.361815676Z",
+    "owner": "claude",
+    "mlflow_experiment_id": "12"
+  },
+  "status": {
+    "state": "pending",
+    "message": {
+      "message": "Evaluation job created",
+      "message_code": "evaluation_job_created",
+      "message_origin": "server"
+    }
+  },
+  "results": {
+    "mlflow_experiment_url": "<mlflow-url>/mlflow/api/2.0/mlflow/experiments"
+  },
+  "name": "nemotron-quality-fp8-no-extended-detectors",
+  "model": {
+    "url": "<litellm-gateway-url>/v1",
+    "name": "nvidia-nemotron-nano-12b-v2-vl",
+    "auth": {
+      "secret_ref": "my-models-secrets"
+    }
+  },
+  "benchmarks": [
+    {
+      "id": "quality",
+      "provider_id": "garak",
+      "parameters": {
+        "garak_config": {
+          "plugins": {
+            "extended_detectors": false
+          },
+          "system": {
+            "parallel_attempts": 16,
+            "parallel_requests": true
+          }
+        }
+      }
+    }
+  ],
+  "experiment": {
+    "name": "nemotron-quality-fp8-no-extended-detectors"
+  }
+}

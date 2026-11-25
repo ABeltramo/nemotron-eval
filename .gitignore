@@ -1,0 +1,13 @@
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# Raw per-attempt garak output over GitHub's 100 MB file limit.
+# The summarized metrics (metrics.md) and HTML reports are committed instead.
+results/2026-11-25-quality/artifacts/scan.report.jsonl
+
+# Local scratch
+*.log

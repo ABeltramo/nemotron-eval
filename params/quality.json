@@ -1,0 +1,11 @@
+{
+  "garak_config": {
+    "system": {
+      "parallel_requests": true,
+      "parallel_attempts": 16
+    },
+    "plugins": {
+      "extended_detectors": false
+    }
+  }
+}
