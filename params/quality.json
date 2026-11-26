@@ -1,4 +1,8 @@
 {
+  "model_parameters": {
+    "max_tokens": 2048,
+    "stop": []
+  },
   "garak_config": {
     "system": {
       "parallel_requests": true,

@@ -5,9 +5,13 @@
 # OS
 .DS_Store
 
-# Raw per-attempt garak output over GitHub's 100 MB file limit.
-# The summarized metrics (metrics.md) and HTML reports are committed instead.
-results/2026-11-25-quality/artifacts/scan.report.jsonl
+# Raw per-attempt garak output: one record per attempt, duplicated prompt
+# text, and full plugin caches. A quality run reaches 150 MB, above GitHub's
+# 100 MB file limit. Commit the slimmed version instead:
+#   python3 scripts/slim-report.py results/<run>/artifacts/scan.report.jsonl
+results/*/artifacts/scan.report.jsonl
+# Raw garak hit log: per-attempt detector output, regenerated from the report.
+results/*/artifacts/scan.hitlog.jsonl
 
 # Local scratch
 *.log

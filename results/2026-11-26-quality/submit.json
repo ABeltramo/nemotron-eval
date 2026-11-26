@@ -1,8 +1,8 @@
 {
   "resource": {
-    "id": "70be3a38-10f4-4de8-8f11-37ea83cd9f8e",
+    "id": "d87fb0f7-ca09-45c9-8ea5-06635c69508f",
     "tenant": "evalhub-tenant",
-    "created_at": "2026-11-25T10:31:24.361815676Z",
+    "created_at": "2026-11-26T17:48:16.009774753Z",
     "owner": "claude",
     "mlflow_experiment_id": "12"
   },
@@ -15,11 +15,11 @@
     }
   },
   "results": {
-    "mlflow_experiment_url": "<mlflow-url>/mlflow/api/2.0/mlflow/experiments"
+    "mlflow_experiment_url": "https://mlflow.redhat-ods-applications.svc.cluster.local:8443/mlflow/api/2.0/mlflow/experiments"
   },
   "name": "nemotron-quality-fp8-no-extended-detectors",
   "model": {
-    "url": "<litellm-gateway-url>/v1",
+    "url": "https://litellm.apps.rosa.ta-abeltramo.cdvu.p3.openshiftapps.com/v1",
     "name": "nvidia-nemotron-nano-12b-v2-vl",
     "auth": {
       "secret_ref": "my-models-secrets"
@@ -38,6 +38,10 @@
             "parallel_attempts": 16,
             "parallel_requests": true
           }
+        },
+        "model_parameters": {
+          "max_tokens": 2048,
+          "stop": []
         }
       }
     }
